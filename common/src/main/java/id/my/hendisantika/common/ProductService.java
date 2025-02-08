@@ -30,4 +30,14 @@ public class ProductService {
     public static List<Product> getProducts() {
         return products;
     }
+
+    public static boolean createProduct(Product product) {
+        try {
+            product.setId(products.size() + 1);
+            products.add(product);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
 }
