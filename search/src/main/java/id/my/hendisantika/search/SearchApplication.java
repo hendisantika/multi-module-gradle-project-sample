@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -46,6 +47,14 @@ public class SearchApplication {
                 .filter(p -> p.getId() == id)
                 .findFirst();
         return product.get();
+    }
+
+    /*
+      GET to return list of Products as JSON.
+   */
+    @RequestMapping("/products")
+    public List<Product> products() {
+        return ProductService.getProducts();
     }
 
 }
