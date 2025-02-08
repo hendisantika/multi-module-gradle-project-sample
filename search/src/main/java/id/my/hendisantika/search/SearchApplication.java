@@ -42,7 +42,7 @@ public class SearchApplication {
     /*
         Get call using a Path param and return a Product as JSON.
      */
-    @GetMapping("/product/{id}")
+    @GetMapping("/products/{id}")
     public Product productWith(@PathVariable("id") long id) {
         Optional<Product> product = ProductService.getProducts()
                 .stream()
@@ -62,7 +62,7 @@ public class SearchApplication {
     /*
         POST call to insert a new Product.
      */
-    @PostMapping("/product/create")
+    @PostMapping("/products/create")
     public String createProduct(@RequestBody Product product) {
         if (ProductService.createProduct(product)) {
             return "Created Product = " + product.toString();

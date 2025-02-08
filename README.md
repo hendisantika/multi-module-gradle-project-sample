@@ -281,6 +281,62 @@ public String createProduct(@RequestBody Product product) {
 
 - Run it and access the above url with JSON as params.
 
+http://localhost:8080/search/hello
+
+http://localhost:8080/search/products
+
+```json
+// 20250209060505
+// http://localhost:8080/search/products
+
+[
+  {
+    "id": 1,
+    "name": "Product-1",
+    "description": "Product-1",
+    "price": 1000.0
+  },
+  {
+    "id": 2,
+    "name": "Product-2",
+    "description": "Product-2",
+    "price": 2000.0
+  },
+  {
+    "id": 3,
+    "name": "Product-3",
+    "description": "Product-3",
+    "price": 3000.0
+  },
+  {
+    "id": 4,
+    "name": "Product-4",
+    "description": "Product-4",
+    "price": 4000.0
+  },
+  {
+    "id": 5,
+    "name": "Product-5",
+    "description": "Product-5",
+    "price": 5000.0
+  }
+]
+```
+
+###
+
+POST http://localhost:8080/search/products/create
+
+Content-Type: application/json
+
+```json
+{
+  "name": "Laptop ASUS",
+  "description": "ASUS ROG",
+  "price": 2500
+}
+```
+
 # Conclusion
 
 - We have successfully created a Gradle Multi Module Spring Boot application using IntelliJ.
