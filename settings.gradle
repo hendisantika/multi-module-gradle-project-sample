@@ -1,2 +1,3 @@
 rootProject.name = 'multi-module-gradle-project-sample'
+include 'common'
 
